@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir le moyen de paiement</title>
+    <link rel="stylesheet" href="paie.css">
+</head>
+<body>
+    <header>
+        <h1>Choisir le moyen de paiement</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="ma_formation.html">Accueil</a></li>
+            <li><a href="A-propos.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        
+    </script>
+    <main>
+        <div class="payment-options">
+            <div class="option" id="orange-money-option">
+                <h2>Paiement via Orange Money</h2>
+                <button id="orange-money-button" class="bouton">Choisir</button>
+            </div>
+            <div class="option" id="crypto-option">
+                <h2>Paiement via Cryptomonnaies</h2>
+                <select id="crypto-select">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="usdt">USDT trc20</option>
+                    <option value="tron">Tron (TRX)</option>
+                </select>
+                <button id="crypto-button" class="bouton">Choisir</button>
+            </div>
+        </div>
+        <div class="payment-details" id="orange-money-details">
+            <h3>Orange Money</h3>
+            <p>Voici le numéro Orange Money pour le paiement :</p>
+            <p>+226 56 66 36 38</p>
+            <p>Nom du compte : Abdoul Wahabou</p>
+        </div>
+        <div class="payment-details" id="crypto-details">
+            <h3>Cryptomonnaies</h3>
+            <div id="bitcoin-address" class="address">
+                <p>Adresse Bitcoin :</p>
+                <p>bc1q63shezr7gvxsmnwg865xfz9rps7lelvm69jtxk</p>
+                <button id="copy-bitcoin">Copier</button>
+            </div>
+            <div id="usdt-address" class="address">
+                <p>Adresse USDT trc20 :</p>
+                <p>TKpWr1Ra8c6F6KBHoJgTewwBiV1pS8A4RW</p>
+                <button id="copy-usdt">Copier</button>
+            </div>
+            <div id="tron-address" class="address">
+                <p>Adresse Tron (TRX) :</p>
+                <p>TKpWr1Ra8c6F6KBHoJgTewwBiV1pS8A4RW</p>
+                <button id="copy-tron">Copier</button>
+            </div>
+        </div>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const orangeMoneyButton = document.getElementById('orange-money-button');
+        const cryptoButton = document.getElementById('crypto-button');
+        const orangeMoneyDetails = document.getElementById('orange-money-details');
+        const cryptoDetails = document.getElementById('crypto-details');
+        const cryptoSelect = document.getElementById('crypto-select');
+    
+        // Lorsque l'utilisateur choisit Orange Money
+        orangeMoneyButton.addEventListener('click', function() {
+            orangeMoneyDetails.style.display = 'block';
+            cryptoDetails.style.display = 'none';
+        });
+    
+        // Lorsque l'utilisateur choisit les Cryptomonnaies
+        cryptoButton.addEventListener('click', function() {
+            const selectedOption = cryptoSelect.value;
+            orangeMoneyDetails.style.display = 'none';
+            cryptoDetails.style.display = 'block';
+            document.querySelectorAll('.address').forEach(function(address) {
+                address.style.display = 'none';
+            });
+            
+            if (selectedOption === 'bitcoin') {
+                document.getElementById('bitcoin-address').style.display = 'block';
+            } else if (selectedOption === 'usdt') {
+                document.getElementById('usdt-address').style.display = 'block';
+            } else if (selectedOption === 'tron') {
+                document.getElementById('tron-address').style.display = 'block';
+            }
+        });
+    
+        // Copier l'adresse Bitcoin
+        document.getElementById('copy-bitcoin').addEventListener('click', function() {
+            copyToClipboard('bc1q63shezr7gvxsmnwg865xfz9rps7lelvm69jtxk');
+        });
+    
+        // Copier l'adresse USDT
+        document.getElementById('copy-usdt').addEventListener('click', function() {
+            copyToClipboard('TKpWr1Ra8c6F6KBHoJgTewwBiV1pS8A4RW');
+        });
+    
+        // Copier l'adresse Tron
+        document.getElementById('copy-tron').addEventListener('click', function() {
+            copyToClipboard('TKpWr1Ra8c6F6KBHoJgTewwBiV1pS8A4RW');
+        });
+    
+        function copyToClipboard(text) {
+            const input = document.createElement('input');
+            input.style.position = 'fixed';
+            input.style.opacity = 0;
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('Adresse copiée dans le presse-papiers : ' + text);
+        }
+    });
+    
+</script>
+
+<section>
+    <p class="cour"> Notez bien : Après avoir fait le paiement, faites une capture d'écran du message de transfert (si C'est par orange money) et la capture d'ecrant du dedail de la transanction (si c'est par criptomoney) et envoyez-le nous sur WhatsApp ou sur Facebook (en inbox) pour recevoir votre code d'inscription pour suivre les cours</p>
+    <p>Exemple (Par criptomoney)</p>
+    <img src="img/cripto.png" alt="" class="cript" height="360px">
+    <hr>
+    <p>Exemple (Par orange money)</p>
+    <img src="img/orange.png" alt="" class="orang" height="160px">
+    <hr>
+    <a href="cours.html" class="blink" id="suivre-cours-link">Suivre mes cours</a>
+    <br>
+    <br>
+    <p class="cour">Cliquez sur l'une des icônes ci-dessous pour envoiyer la capture d'ecrant apres le paiement  </p>
+</section>
+<section class="social-icons">
+    <div class="facebook">
+        <a href= "https://www.facebook.com/profile.php?id=61552545170578&locale=fr_FR" ><img src="img/facebook.png" title="facebook" height="95px" width="95" class="blink"></a>
+    </div>
+    <div class="whatsapp">
+        <a href="https://wa.me/+22661229766"><img src="img/whatsap.png" title="whatsap" height="95" width="95" class="blink"></a>
+    </div>
+</section>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const suivreCoursLink = document.getElementById('suivre-cours-link');
+
+suivreCoursLink.addEventListener('click', function(e) {
+e.preventDefault(); // Empêche la redirection par défaut
+
+// Demandez à l'utilisateur de saisir la clé
+const accessKey = prompt('Veuillez entrer la clé d\'accès :');
+
+// Créez un tableau de clés valides
+const accessKeys = [
+    
+   '1@AccessKey!',
+   '2#SecretCode$',
+   '3*SecurePass%',
+   '4&Hidden123*',
+   '5^Code_5678',
+   '6(UniquePass)',
+   '7!Access2023',
+   '8$SecureCoding',
+   '9@Secret1234',
+   '10*CodeAccess!',
+   '11klmpofg',
+   '12klmpofg',   
+   '13klmpofg',
+   '14klmpofg',
+   '15klmpofg',
+   '16klmpofg',
+   '17klmpofg',
+   '18klmpofg',
+   '19klmpofg',
+   '20klmpofg',
+   '22klmpofg',
+   '23klmpofg',
+   '24klmpofg',
+   '25klmpofg',
+   '26klmpofg',
+   '27klmpofg',
+   '28klmpofg',
+   '29klmpofg',
+   '30klmpofg',
+   '31klmpofg',
+   '32klmpofg',
+   '33klmpofg',
+
+
+];
+
+// Vérifiez si la clé saisie est dans le tableau des clés valides
+if (accessKeys.includes(accessKey)) {
+    // La clé est correcte, redirigez l'utilisateur vers "cours.html"
+    window.location.href = 'cours.html';
+} else {
+    // La clé est incorrecte, affichez un message d'erreur
+    alert('Clé incorrecte. Veuillez faire le paiement et demander votre cle de connexion.');
+}
+});
+});
+
+
+</script>
+</body>
+</html>

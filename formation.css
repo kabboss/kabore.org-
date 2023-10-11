@@ -1,0 +1,135 @@
+/* Réinitialisation CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header img {
+    max-width: 100%; /* Ajuste l'image à la largeur de l'écran */
+}
+
+header {
+    padding: 20px 0;
+}
+
+.forma {
+    background-color: #bbb;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial black;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+.baniere {
+    margin-bottom: 60%;
+}
+
+.html {
+    position: absolute;
+    left: 10px; /* Ajustez la distance à gauche */
+    top: 70%; /* Centrez l'image verticalement */
+    transform: translateY(-50%); /* Centrez l'image verticalement */
+    width: 50%; /* La largeur est de 50% */
+}
+
+.css {
+    position: absolute;
+    right: 10px; /* Ajustez la distance à droite */
+    top: 70%; /* Centrez l'image verticalement */
+    transform: translateY(-50%); /* Centrez l'image verticalement */
+    width: 50%; /* La largeur est de 50% */
+    height: auto;
+}
+
+
+
+/* Le reste de vos styles reste inchangé */
+
+
+nav {
+    background-color: #444;
+    color: #3b45d8;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c4eb39;
+}
+
+/* Vos autres styles restent inchangés, mais vous pouvez ajuster les largeurs, marges et tailles de police selon vos besoins pour une meilleure adaptation mobile. */
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%; /* Occupe la largeur totale de l'écran */
+        margin: 0;
+    }
+    
+    aside {
+        width: 100%; /* Occupe la largeur totale de l'écran */
+        margin: 0;
+        padding: 20px;
+    }
+
+    .video-bottom-left {
+        width: 100%; /* Occupe la largeur totale de l'écran */
+    }
+
+    .payment-link {
+        width: 100%; /* Occupe la largeur totale de l'écran */
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+    font-size: 25px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.about {
+    font-size: 20px;
+}
+
+.courses {
+    font-size: 20px;
+}

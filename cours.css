@@ -1,0 +1,87 @@
+/* Réinitialisation CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centre le texte de tout le contenu de la page */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 44px;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c4eb39;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section.video {
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333; /* Couleur du texte */
+}
+
+iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Ajoutez d'autres styles au besoin */
+.modul {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial Black;
+}
+
+.TP {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial Black; 
+}

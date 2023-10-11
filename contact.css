@@ -1,0 +1,103 @@
+/* Réinitialisation CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centre le texte de tout le contenu de la page */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c4eb39;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section {
+    padding: 20px;
+    text-align: center; /* Centre le texte à l'intérieur des sections */
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Couleur du texte */
+}
+
+section p {
+    color: #555; /* Couleur du texte */
+    margin-bottom: 10px;
+}
+
+/* Ajoutez d'autres styles au besoin */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centre horizontalement les éléments */
+    margin-top: 15cm; /* Espacement de 15 cm (150px) depuis le haut de la page */
+}
+
+.social-icons {
+    margin: 0 75px; /* Espacement horizontal de 15 cm (150px) entre les icônes */
+}
+.facebook {
+    margin: 0 70px;
+
+}
+
+.whatsapp {
+    margin: 0 70px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
